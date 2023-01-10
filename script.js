@@ -93,9 +93,9 @@ function getPasswordOptions() {
   var finalCharArray = [];
   // variables declared for all the declarations needed to create random password.
   var isLowercase = confirm("do you want lowercase characters?");
-  var isUppercase = confirm("do you want isUppercase?");
-  var isNumber = confirm("do you want isNumber?");
-  var isSpecialChar = confirm("do you want isSpecialChar?");
+  var isUppercase = confirm("do you want Uppercase characters?");
+  var isNumber = confirm("do you want Numb3rs?");
+  var isSpecialChar = confirm("do you want Specia! ch@r@cters?");
   // if statements created to help with the logic of the password by obtaining info from the user.
   if (isLowercase) {
     finalCharArray.push(...lowerCasedCharacters);
@@ -133,7 +133,7 @@ function getRandom(arr) {
   }
 
   for (i = 0; i < length; i++) {
-    password += chars[arr[i] % chars.length];
+    password += chars[arr[i] % passwordLength];
   }
   console.log(password);
   return password;

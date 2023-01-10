@@ -117,7 +117,7 @@ function getPasswordOptions() {
 function getRandom(arr) {
   var finalArray = getPasswordOptions();
   let password = "";
-  const chars = "01234567890abcdefghijklmnopqrstuvwxyz!£$%^&*()_+~";
+  console.log((chars = "01234567890abcdefghijklmnopqrstuvwxyz!£$%^&*()_+~"));
   // if statements used to determine the length and calculate the possibilities.
 
   if (finalArray.length === 0) {

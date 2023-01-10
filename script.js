@@ -132,7 +132,11 @@ function getRandom(arr) {
     return alert("Please choose a number between 10 and 65");
   }
 
-  // for loop
+  for (i = 0; i < length; i++) {
+    password += chars[arr[i] % chars.length];
+  }
+  console.log(password);
+  return password;
 }
 
 // Function to generate password with user input

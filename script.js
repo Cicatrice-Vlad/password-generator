@@ -88,15 +88,15 @@ var upperCasedCharacters = [
   "Z",
 ];
 
-// Function to prompt user for password options
+// Function used to prompt user for password options
 function getPasswordOptions() {
   var finalCharArray = [];
-
+  // variables declared for all the declarations needed to create random password.
   var isLowercase = confirm("do you want lowercase characters?");
   var isUppercase = confirm("do you want isUppercase?");
   var isNumber = confirm("do you want isNumber?");
   var isSpecialChar = confirm("do you want isSpecialChar?");
-
+  // if statements created to help with the logic of the password by obtaining info from the user.
   if (isLowercase) {
     finalCharArray.push(...lowerCasedCharacters);
   }
@@ -116,6 +116,7 @@ function getPasswordOptions() {
 // Function for getting a random element from an array
 function getRandom(arr) {
   var finalArray = getPasswordOptions();
+  // if statements used to determine the length and calculate the possibilities.
 
   if (finalArray.length === 0) {
     return alert("Please choose at least one type of characters");
@@ -124,7 +125,7 @@ function getRandom(arr) {
   var passwordLength = prompt(
     "How many characters do you want to use for your password? Choose between 10 and 65."
   );
-
+  // used a radix number (10 in this case) to create logic for the parseInt function.
   passwordLength = parseInt(passwordLength, 10);
 
   if (passwordLength < 10 || passwordLength > 65 || !passwordLength) {

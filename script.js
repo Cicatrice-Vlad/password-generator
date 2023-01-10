@@ -116,6 +116,8 @@ function getPasswordOptions() {
 // Function for getting a random element from an array
 function getRandom(arr) {
   var finalArray = getPasswordOptions();
+  let password = "";
+  const chars = "01234567890abcdefghijklmnopqrstuvwxyz!£$%^&*()_+~";
   // if statements used to determine the length and calculate the possibilities.
 
   if (finalArray.length === 0) {
@@ -131,9 +133,9 @@ function getRandom(arr) {
   if (passwordLength < 10 || passwordLength > 65 || !passwordLength) {
     return alert("Please choose a number between 10 and 65");
   }
-
+  // several tries so the for loop would work. Still no real result.
   for (i = 0; i < length; i++) {
-    password += chars[arr[i] % passwordLength];
+    password += chars[arr[i] % chars.length];
   }
   console.log(password);
   return password;

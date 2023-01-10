@@ -127,7 +127,7 @@ function getRandom(arr) {
   );
   // used a radix number (10 in this case) to create logic for the parseInt function.
   passwordLength = parseInt(passwordLength, 10);
-
+  // using alert method for the window to expose that a certain action is needed.
   if (passwordLength < 10 || passwordLength > 65 || !passwordLength) {
     return alert("Please choose a number between 10 and 65");
   }
